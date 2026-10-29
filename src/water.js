@@ -4,7 +4,7 @@
 //  fresnel reflection of sky and maple canopy, sun glints, moon and lantern reflections.
 //  patchUnder: caustics + depth-in-alpha for every material that is drawn in the under-water pass.
 import * as THREE from 'three';
-import { bakeTexture } from '../../src/core/textures.js';
+import { bakeTexture } from './core/textures.js';
 import { pondSDF } from './shape.js';
 
 const quadGeo = new THREE.PlaneGeometry(2, 2);

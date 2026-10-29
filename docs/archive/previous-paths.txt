@@ -1,0 +1,32 @@
+// ORIGINAL (preserved, not deleted — disabled by comment): previous nested paths
+// import { firstMesh } from '../../src/core/assets.js';
+// import { bakeTexture, fbmNormal } from '../../src/core/textures.js';
+// import { bakeTexture } from '../../src/core/textures.js';
+// import { Engine, THREE, normalize, prepModel, damp, clamp, smooth, lerp, studioEnvironment } from '../../src/core/engine.js';
+// import { Assets } from '../../src/core/assets.js';
+// import { Pointer } from '../../src/core/input.js';
+// import { smoothScroll, gsap, reveal } from '../../src/core/scroll.js';
+// // ORIGINAL (preserved, not deleted — disabled by comment): import { preloader, cursor, magnetic, worldNav } from '../../src/core/ui.js';
+// import { preloader, cursor, magnetic } from '../../src/core/ui.js';
+// import { fbmTexture } from '../../src/core/textures.js';
+// import { PlanarReflection } from '../../src/core/reflector.js';
+//   assets.texture('img/koi/canopy.webp').then(t => { t.anisotropy = 8; W.uCanopy.value = t; }),
+//   assets.texture('img/koi/cookie.webp', { srgb: false }).then(t => { W.uCookie.value = t; underShared.uCookie.value = t; }),
+//   assets.gltf('models/koi/kohaku.glb'), assets.gltf('models/koi/showa.glb'),
+//   assets.gltf('models/koi/lotus.glb'), assets.gltf('models/koi/lantern.glb'),
+// // ORIGINAL (preserved, not deleted — disabled by comment): worldNav('koi', { theme: 'dark', corner: 'bl' });
+// import { bakeTexture, fbmNormal, fbmTexture } from '../../src/core/textures.js';
+//     assets.texture('img/koi/floor.webp', { repeat: [1, 1] }).then(t => { t.anisotropy = 16; gardenShared.uFloorTex.value = t; }),
+//     assets.texture('img/koi/moss.webp', { repeat: [1, 1] }).then(t => { t.anisotropy = 16; gardenShared.uMossTex.value = t; }),
+// import { bakeTexture } from '../../src/core/textures.js';
+//               <figure><img src="../../img/koi/room-moss.webp" alt="A tatami room with shoji open onto a moss garden and the edge of the pond" loading="lazy"></figure>
+//               <figure><img src="../../img/koi/room-maple.webp" alt="A ryokan room with a cedar tub and a red maple framed by the window" loading="lazy"></figure>
+//               <figure><img src="../../img/koi/room-moon.webp" alt="An upper room at night opening onto a moon-viewing deck over the pond" loading="lazy"></figure>
+//   <link rel="stylesheet" href="./examples/koi/style.css">
+//   <script type="module" src="./examples/koi/main.js"></script>
+// // ORIGINAL (preserved, not deleted — disabled by comment): import { preloader, cursor, magnetic, worldNav } from './core/ui.js';
+// // ORIGINAL (preserved, not deleted — disabled by comment): worldNav('koi', { theme: 'dark', corner: 'bl' });
+// ORIGINAL (preserved, not deleted — disabled by comment): old root HTML image paths
+//               <figure><img src="../../img/koi/room-moss.webp" alt="A tatami room with shoji open onto a moss garden and the edge of the pond" loading="lazy"></figure>
+//               <figure><img src="../../img/koi/room-maple.webp" alt="A ryokan room with a cedar tub and a red maple framed by the window" loading="lazy"></figure>
+//               <figure><img src="../../img/koi/room-moon.webp" alt="An upper room at night opening onto a moon-viewing deck over the pond" loading="lazy"></figure>

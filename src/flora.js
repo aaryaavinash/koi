@@ -1,6 +1,6 @@
 // Things on the water: lotus, lily pads, falling maple leaves and petals, food pellets, splash droplets, snow.
 import * as THREE from 'three';
-import { bakeTexture } from '../../src/core/textures.js';
+import { bakeTexture } from './core/textures.js';
 import { pondSDF } from './shape.js';
 import { underShared } from './water.js';
 

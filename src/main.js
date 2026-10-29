@@ -1,18 +1,17 @@
 import './tailwind.css';
-import { Engine, THREE, normalize, prepModel, damp, clamp, smooth, lerp, studioEnvironment } from '../../src/core/engine.js';
-import { Assets } from '../../src/core/assets.js';
-import { Pointer } from '../../src/core/input.js';
-import { smoothScroll, gsap, reveal } from '../../src/core/scroll.js';
-// ORIGINAL (preserved, not deleted — disabled by comment): import { preloader, cursor, magnetic, worldNav } from '../../src/core/ui.js';
-import { preloader, cursor, magnetic } from '../../src/core/ui.js';
-import { fbmTexture } from '../../src/core/textures.js';
+import { Engine, THREE, normalize, prepModel, damp, clamp, smooth, lerp, studioEnvironment } from './core/engine.js';
+import { Assets } from './core/assets.js';
+import { Pointer } from './core/input.js';
+import { smoothScroll, gsap, reveal } from './core/scroll.js';
+import { preloader, cursor, magnetic } from './core/ui.js';
+import { fbmTexture } from './core/textures.js';
 import { RippleSim, waterMaterial, causticTexture, microTexture, underShared, patchUnder } from './water.js';
 import { koiPrototype, School } from './koi.js';
 import { Flora, patchFloat } from './flora.js';
 import { MapleBranch } from './maple.js';
 import { buildTerrain, terrainTextures, rockMaterial, buildRocks, gardenShared, buildEnclosure } from './garden.js';
 import { terrainH, pondSDF, LANTERN } from './shape.js';
-import { PlanarReflection } from '../../src/core/reflector.js';
+import { PlanarReflection } from './core/reflector.js';
 
 const DBG = new URLSearchParams(location.search);
 const D = Math.PI / 180;
@@ -123,8 +122,8 @@ engine.onResize((w, h, dpr) => {
 // ─── Garden ────────────────────────────────────────────────────────────────────
 const texLoads = [
   terrainTextures(renderer, assets),
-  assets.texture('img/koi/canopy.webp').then(t => { t.anisotropy = 8; W.uCanopy.value = t; }),
-  assets.texture('img/koi/cookie.webp', { srgb: false }).then(t => { W.uCookie.value = t; underShared.uCookie.value = t; }),
+  assets.texture('img/canopy.webp').then(t => { t.anisotropy = 8; W.uCanopy.value = t; }),
+  assets.texture('img/cookie.webp', { srgb: false }).then(t => { W.uCookie.value = t; underShared.uCookie.value = t; }),
 ];
 const terrain = buildTerrain(renderer);
 under.add(terrain.under); scene.add(terrain.above);
@@ -149,8 +148,8 @@ lampMain.position.copy(firePos); lampUnder.position.copy(firePos);
 W.uLampPos.value.copy(firePos);
 
 const loads = [
-  assets.gltf('models/koi/kohaku.glb'), assets.gltf('models/koi/showa.glb'),
-  assets.gltf('models/koi/lotus.glb'), assets.gltf('models/koi/lantern.glb'),
+  assets.gltf('models/kohaku.glb'), assets.gltf('models/showa.glb'),
+  assets.gltf('models/lotus.glb'), assets.gltf('models/lantern.glb'),
 ];
 
 // ─── Koi ───────────────────────────────────────────────────────────────────────
@@ -338,7 +337,6 @@ const hooks = {
 };
 
 // ─── UI ────────────────────────────────────────────────────────────────────────
-// ORIGINAL (preserved, not deleted — disabled by comment): worldNav('koi', { theme: 'dark', corner: 'bl' });
 const cur = cursor({ color: '#f3efe6', blend: 'normal', size: 30 });
 magnetic();
 const lenis = smoothScroll({ lerp: 0.07 });

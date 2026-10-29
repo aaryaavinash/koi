@@ -1,11 +1,11 @@
-# 05 · Still Water — "Touch the pond"
+# Still Water — "Touch the pond"
 Brand: **Still Water** — a seven-room ryokan in Kyoto built around a 200-year-old koi pond.
 
 ## Signature interaction
 Top-down (slightly tilted) koi pond filling the viewport with a **real-time GPGPU ripple simulation** (height-field wave
 equation in ping-pong float render targets, ~512²). The cursor drags through the water leaving wakes; clicking drops a food
 pellet (splash + ring ripple) and the koi turn and swim to it (steering: wander, separation, seek).
-- Koi: `models/koi/kohaku.glb` and `showa.glb`, 6–10 instances with vertex-shader body undulation (sine wave along the body's
+- Koi: `models/kohaku.glb` and `showa.glb`, 6–10 instances with vertex-shader body undulation (sine wave along the body's
   long axis, amplitude growing toward the tail; tail flicks harder when swimming fast). Render them below the surface so they
   are refracted and darkened by depth.
 - Water: refraction of the pond floor (dark river stones + sand, procedural) using the ripple normals, fresnel sky reflection

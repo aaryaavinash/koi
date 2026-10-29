@@ -1,6 +1,6 @@
 // The garden around the water: one terrain (pond floor below y=0, moss banks above), shoreline rocks.
 import * as THREE from 'three';
-import { bakeTexture, fbmNormal, fbmTexture } from '../../src/core/textures.js';
+import { bakeTexture, fbmNormal, fbmTexture } from './core/textures.js';
 import { patchUnder } from './water.js';
 import { terrainH, pondSDF, noise, fbm, LANTERN } from './shape.js';
 
@@ -47,8 +47,8 @@ const TERRAIN_HEAD = /* glsl */`
 export function terrainTextures(renderer, assets) {
   gardenShared.uNoiseTex.value = fbmTexture(renderer, { size: 512, scale: 4, octaves: 5, contrast: 1.4 });
   return Promise.all([
-    assets.texture('img/koi/floor.webp', { repeat: [1, 1] }).then(t => { t.anisotropy = 16; gardenShared.uFloorTex.value = t; }),
-    assets.texture('img/koi/moss.webp', { repeat: [1, 1] }).then(t => { t.anisotropy = 16; gardenShared.uMossTex.value = t; }),
+    assets.texture('img/floor.webp', { repeat: [1, 1] }).then(t => { t.anisotropy = 16; gardenShared.uFloorTex.value = t; }),
+    assets.texture('img/moss.webp', { repeat: [1, 1] }).then(t => { t.anisotropy = 16; gardenShared.uMossTex.value = t; }),
   ]);
 }
 

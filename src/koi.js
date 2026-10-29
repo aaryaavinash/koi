@@ -1,7 +1,7 @@
 // Koi: each Meshy fish is re-parameterised along an automatically extracted spine (arc length s, lateral, vertical,
 // along offsets), so the vertex shader can bend it along a live follow-the-leader chain with a travelling body wave.
 import * as THREE from 'three';
-import { firstMesh } from '../../src/core/assets.js';
+import { firstMesh } from './core/assets.js';
 import { patchUnder } from './water.js';
 import { pondSDF } from './shape.js';
 

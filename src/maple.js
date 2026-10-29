@@ -1,7 +1,7 @@
 // An old momiji limb reaching over the water: tapered bark tubes and a few hundred instanced leaves
 // that sway, turn with the seasons and throw their shadows onto the pond floor.
 import * as THREE from 'three';
-import { bakeTexture, fbmNormal } from '../../src/core/textures.js';
+import { bakeTexture, fbmNormal } from './core/textures.js';
 import { patchUnder, underShared } from './water.js';
 
 function taperedTube(curve, r0, r1, seg = 40, radial = 9) {
